@@ -1,15 +1,20 @@
 {
-  "name": "COLLEGE PROJECT",
+  "name": "rat of clg prj",
   "description": "Blank Process",
   "main": "(1) pdf to excel.xaml",
   "dependencies": {
+    "BalaReva.Word.Activities": "[8.0.0]",
+    "ILove_PDF": "[1.4.0]",
+    "ILove_PDF_test": "[1.4.19]",
     "UiPath.AdobePdfServices.IntegrationService.Activities": "[4.0.6]",
-    "UiPath.Excel.Activities": "[2.17.0-preview]",
+    "UiPath.Excel.Activities": "[2.20.2]",
     "UiPath.Mail.Activities": "[1.18.2]",
     "UiPath.PDF.Activities": "[3.12.0-preview]",
+    "UiPath.Python.Activities": "[1.6.0]",
     "UiPath.System.Activities": "[22.10.4]",
     "UiPath.Testing.Activities": "[22.12.0-preview]",
-    "UiPath.UIAutomation.Activities": "[22.10.4]"
+    "UiPath.UIAutomation.Activities": "[22.10.4]",
+    "UiPath.Word.Activities": "[1.16.1]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -52,12 +57,6 @@
     {
       "filePath": "(1) pdf to excel.xaml",
       "uniqueId": "a74c61fb-fa25-4d9b-8a1d-c0352588676b",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "sorting.xaml",
-      "uniqueId": "3e30b727-55b7-4c7e-aaa8-7b77cffdfaa3",
       "input": [],
       "output": []
     }

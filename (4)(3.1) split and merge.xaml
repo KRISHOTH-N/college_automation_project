@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Activity mc:Ignorable="sap sap2010" x:Class="split_and_merge" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_fname" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>869.6,3632</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>split_and_merge_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="49">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="split_and_merge" sap:VirtualizedContainerService.HintSize="752,3567.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt1" />
+      <Variable x:TypeArguments="x:Double" Name="no_of_students" />
+      <Variable x:TypeArguments="x:Double" Name="no_of_row" />
+      <Variable x:TypeArguments="x:Double" Name="no_of_col" />
+      <Variable x:TypeArguments="x:String" Name="alphabets" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt" />
+      <Variable x:TypeArguments="x:Double" Name="range" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
+      <Variable x:TypeArguments="x:String" Name="in_filename" />
+      <Variable x:TypeArguments="x:String" Name="variable2" />
+      <Variable x:TypeArguments="x:String" Name="f" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="False" DataTable="[dt1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="689.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="combined" WorkbookPath="[in_fname]">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <ui:MultipleAssign DisplayName="Multiple Assign(CONTAINS::no of students)" sap:VirtualizedContainerService.HintSize="689.6,194.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Double">[no_of_row]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Double">[dt1.RowCount]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Double">[no_of_col]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Double">[dt1.ColumnCount]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Double">[no_of_students]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Double">[(dt1.RowCount-1)/2]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[alphabets]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">ABCDEFGHIJKLMNOPQRSTUVWXYZ</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <ui:ReadRange AddHeaders="False" DataTable="[dt1]" DisplayName="Read Range Workbook(reading 1st half)" sap:VirtualizedContainerService.HintSize="689.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" Range="[&quot;A1:&quot;+alphabets(convert.ToInt32(no_of_col))+(convert.ToInt32(no_of_students)).ToString]" SheetName="combined" WorkbookPath="[in_fname]" />
+    <ui:WriteRange AddHeaders="False" DataTable="[dt1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="689.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="BASIC" StartingCell="A2" WorkbookPath="[in_fname]" />
+    <ui:ReadRange AddHeaders="False" DataTable="[dt1]" DisplayName="Read Range Workbook(reading 2nd half)" sap:VirtualizedContainerService.HintSize="689.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_4" Range="[&quot;A&quot;+(convert.ToInt32(no_of_students)+1).ToString]" SheetName="combined" WorkbookPath="[in_fname]" />
+    <ui:WriteRange AddHeaders="False" DataTable="[dt1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="689.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="new" WorkbookPath="[in_fname]">
+      <ui:WriteRange.StartingCell>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:WriteRange.StartingCell>
+    </ui:WriteRange>
+    <ui:ReadRange AddHeaders="False" DataTable="[dt1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="689.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_5" Range="D1" SheetName="new" WorkbookPath="[in_fname]" />
+    <Assign sap:VirtualizedContainerService.HintSize="689.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Double">[range]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Double">[dt1.ColumnCount]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:WriteRange AddHeaders="False" DataTable="[dt1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="689.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="BASIC" StartingCell="[alphabets(convert.ToInt32(no_of_col))+&quot;2:&quot;+alphabets(convert.ToInt32(no_of_col+range))+(convert.ToInt32(no_of_students)+1).ToString]" WorkbookPath="[in_fname]" />
+    <Sequence DisplayName="Main seq" sap:VirtualizedContainerService.HintSize="689.6,1844" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="colnam" />
+        <Variable x:TypeArguments="x:Int32" Name="i" />
+        <Variable x:TypeArguments="sd:DataTable" Name="dx" />
+        <Variable x:TypeArguments="sd:DataTable" Name="tab" />
+        <Variable x:TypeArguments="x:Double" Name="d" />
+        <Variable x:TypeArguments="x:Int32" Name="no_of_absentees" />
+        <Variable x:TypeArguments="s:String[]" Default="[New String(){}]" Name="absArr" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadRange Range="{x:Null}" AddHeaders="False" DataTable="[dx]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="627.2,88" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="BASIC" WorkbookPath="[in_fname]" />
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="False" DataTable="[dx]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="627.2,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="no result" WorkbookPath="[in_fname]" />
+      <Assign sap:VirtualizedContainerService.HintSize="627.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">1</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="627.2,1326.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" TemplatePath="C:\Users\krishoth\OneDrive\Documents\Sem3-college marks format (32).xlsx" WorkbookPath="[in_fname]">
+        <ueab:ExcelApplicationCard.Body>
+          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="593.6,1056.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[i&lt;=((dx.ColumnCount-3)/2)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="531.2,684" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                <ui:InterruptibleWhile.Body>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,516.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Int32" Name="colChar" />
+                      <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="table" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:DeleteColumnX ColumnName="[&quot;Result &quot;+i.ToString]" DisplayName="Delete Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,161.6" sap2010:WorkflowViewState.IdRef="DeleteColumnX_1" Range="[Excel.Sheet(&quot;no result&quot;)]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[i]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[i+1]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Int32">[colChar]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Int32">[colChar+2]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </ui:InterruptibleWhile.Body>
+              </ui:InterruptibleWhile>
+              <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="531.2,90.4" sap2010:WorkflowViewState.IdRef="DeleteSheetX_6" Sheet="[Excel.Sheet(&quot;combined&quot;)]" />
+              <ueab:DeleteSheetX DisplayName="Delete Sheet" sap:VirtualizedContainerService.HintSize="531.2,90.4" sap2010:WorkflowViewState.IdRef="DeleteSheetX_7" Sheet="[Excel.Sheet(&quot;new&quot;)]" />
+            </Sequence>
+          </ActivityAction>
+        </ueab:ExcelApplicationCard.Body>
+      </ueab:ExcelApplicationCard>
+    </Sequence>
+    <Assign sap:VirtualizedContainerService.HintSize="689.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[f]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[in_fname]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="(6) GRADETONUM.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="689.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="(5) GRADETONUM.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_fname">[f]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+  </Sequence>
+</Activity>

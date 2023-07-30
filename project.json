@@ -1,5 +1,6 @@
 {
   "name": "rat of clg prj",
+  "projectId": "177881b4-d2c7-4024-92d6-d5f4191f286f",
   "description": "Blank Process",
   "main": "(1) pdf to excel.xaml",
   "dependencies": {
@@ -20,7 +21,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.12.0.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

@@ -22,7 +22,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.compressPdfStatus": [
@@ -47,7 +48,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.CreateDocument": [
@@ -72,7 +74,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.createPdf": [
@@ -97,7 +100,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.downloadCompressedPdf": [
@@ -122,7 +126,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.DownloadCreatedPDF": [
@@ -147,7 +152,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.DownloadExportedPDF": [
@@ -172,7 +178,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.DownloadGeneratedDocument": [
@@ -197,7 +204,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.DownloadLinearizedPdf": [
@@ -222,7 +230,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.DownloadPageManipulatedPdf": [
@@ -247,7 +256,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.exportPdf": [
@@ -272,7 +282,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.GetcreatePDFStatus": [
@@ -297,7 +308,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.GetDocumentGenerationStatus": [
@@ -322,7 +334,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.GetexportPDFStatus": [
@@ -347,7 +360,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.GetlinearizePdfStatus": [
@@ -372,7 +386,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.GetpageManipulationStatus": [
@@ -397,7 +412,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.GetRecord": [
@@ -422,7 +438,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.linearizePdf": [
@@ -447,7 +464,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.pageManipulation": [
@@ -472,7 +490,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.AdobePdfServices.IntegrationService.Activities.Scope": [
@@ -497,7 +516,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.AddAndProcessQueueItem": [
@@ -512,7 +532,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.AddQueueItem": [
@@ -527,7 +548,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.AddTransactionItem": [
@@ -542,7 +564,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.BeginProcess": [
@@ -557,7 +580,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.BulkAddQueueItems": [
@@ -572,7 +596,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.DeleteQueueItems": [
@@ -583,7 +608,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.GetJobs": [
@@ -594,7 +620,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.GetQueueItem": [
@@ -609,7 +636,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.GetQueueItems": [
@@ -624,7 +652,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.GetRobotAsset": [
@@ -639,7 +668,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.GetRobotCredential": [
@@ -654,7 +684,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.GetTransactionItem": [
@@ -669,7 +700,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.InvokeProcess": [
@@ -684,7 +716,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.PostponeTransactionItem": [
@@ -695,7 +728,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.QueueTrigger": [
@@ -728,7 +762,8 @@
             "Value": "ItemsPerJobActivationTarget",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.SetAsset": [
@@ -743,7 +778,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.SetCredential": [
@@ -758,7 +794,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.SetTransactionProgress": [
@@ -769,7 +806,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.SetTransactionStatus": [
@@ -780,7 +818,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.StartJob": [
@@ -795,7 +834,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.StopJob": [
@@ -806,7 +846,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.Storage.DeleteStorageFile": [
@@ -821,7 +862,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.Storage.DownloadStorageFile": [
@@ -836,7 +878,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.Storage.ListStorageFiles": [
@@ -851,7 +894,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.Storage.ReadStorageText": [
@@ -866,7 +910,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.Storage.UploadStorageFile": [
@@ -881,7 +926,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.Storage.WriteStorageText": [
@@ -896,7 +942,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.TimeTrigger": [
@@ -911,7 +958,8 @@
             "Value": "CronExpression",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.WaitQueueItem": [
@@ -926,7 +974,8 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Mail.Activities.Business.ExchangeApplicationCard": [
@@ -951,7 +1000,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Mail.Activities.Business.GmailApplicationCard": [
@@ -976,7 +1026,8 @@
             "Value": "Connector",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Mail.Activities.Business.NewGmailTrigger": [
@@ -1005,7 +1056,8 @@
             "Value": "ObjectName",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Mail.Activities.Business.NewO365EmailTrigger": [
@@ -1034,7 +1086,8 @@
             "Value": "ObjectName",
             "ValueSource": "Property"
           }
-        }
+        },
+        "DefaultValueSource": "Default"
       }
     ]
   }

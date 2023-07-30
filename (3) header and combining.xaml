@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Activity mc:Ignorable="sap sap2010" x:Class="header_ext" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
@@ -8,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>869.6,10296.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>860.8,11432.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>header_ext_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
@@ -124,7 +123,7 @@
       <AssemblyReference>UiPath.Python</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="header ext and combingin sheets" sap:VirtualizedContainerService.HintSize="828.8,10232" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="header ext and combingin sheets" sap:VirtualizedContainerService.HintSize="828.8,11368" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt1" />
       <Variable x:TypeArguments="x:Double" Name="col_ct_theo" />
@@ -141,7 +140,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="extract header" sap:VirtualizedContainerService.HintSize="766.4,10646.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="extract header" sap:VirtualizedContainerService.HintSize="766.4,11256" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Double" Name="no_of_theo" />
         <Variable x:TypeArguments="x:Double" Name="no_of_lab" />
@@ -164,12 +163,10 @@
         <Variable x:TypeArguments="x:Int32" Name="in_sec_count" />
         <Variable x:TypeArguments="s:String[]" Name="arr" />
         <Variable x:TypeArguments="x:String" Name="s" />
-        <Variable x:TypeArguments="x:Double" Name="tcred">
-          <Variable.Default>
-            <Literal x:TypeArguments="x:Double" />
-          </Variable.Default>
-        </Variable>
+        <Variable x:TypeArguments="x:Double" Default="0" Name="tcred" />
         <Variable x:TypeArguments="x:Int32" Name="no_of_sec" />
+        <Variable x:TypeArguments="x:String" Name="word_path" />
+        <Variable x:TypeArguments="x:String" Name="staff_file_path" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -749,7 +746,9 @@
           <InArgument x:TypeArguments="x:Int32">[in_sec_count]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="calculating pass percentage and arrear list for each section&#xD;&#xA;" Condition="[in_sec_count&gt;0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="704,558.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="704,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;CHOOSE STAFF EXCEL&quot;]" />
+      <ui:SelectFile DisplayName="Browse For File" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="704,139.2" sap2010:WorkflowViewState.IdRef="SelectFile_2" SelectedFile="[staff_file_path]" />
+      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="calculating pass percentage and arrear list for each section&#xA;" Condition="[in_sec_count&gt;0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="704,558.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
         <ui:InterruptibleDoWhile.Body>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,347.2" sap2010:WorkflowViewState.IdRef="Sequence_48">
             <sap:WorkflowViewStateService.ViewState>
@@ -759,10 +758,21 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="(9)(4.3)pass percent and Arrear list.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="(8)(3.3)pass percent and Arrear list.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="in_fn">[in_filename]</InArgument>
-                <InArgument x:TypeArguments="s:String[]" x:Key="in_codes">[subCODES]</InArgument>
-                <InArgument x:TypeArguments="s:String[]" x:Key="in_subs">[subNAMES]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="in_sec_ct">[in_sec_count]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_fn">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_filename" />
+                </InArgument>
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_codes">
+                  <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="subCODES" />
+                </InArgument>
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_subs">
+                  <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="subNAMES" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_sec_ct">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_sec_count" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_staff_file">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="staff_file_path" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_41">
@@ -872,7 +882,9 @@
         </Assign>
         <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="528,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Total credits = &quot;+tcred.tostring]" />
       </Sequence>
-      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="704,514.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="704,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;choose word document template file&quot;]" />
+      <ui:SelectFile DisplayName="Browse For File" Filter="All files (*.*)|*.*" sap:VirtualizedContainerService.HintSize="704,139.2" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[word_path]" />
+      <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[no_of_sec&gt;0]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="704,514.4" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
         <ui:InterruptibleDoWhile.Body>
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,347.2" sap2010:WorkflowViewState.IdRef="Sequence_52">
             <sap:WorkflowViewStateService.ViewState>
@@ -882,24 +894,13 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="(10) (4.4)gpa.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="(9) (3.4)gpa.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="file_path">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_filename" />
-                </InArgument>
-                <InArgument x:TypeArguments="s:String[]" x:Key="sub_names">
-                  <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="subNAMES" />
-                </InArgument>
-                <InArgument x:TypeArguments="s:String[]" x:Key="sub_codes">
-                  <VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="subCODES" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Double" x:Key="tot_cred">
-                  <VisualBasicValue x:TypeArguments="x:Double" ExpressionText="tcred" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="str">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="st" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="in_sec_ct">
-                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="no_of_sec" />
-                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="file_path">[in_filename]</InArgument>
+                <InArgument x:TypeArguments="s:String[]" x:Key="sub_names">[subNAMES]</InArgument>
+                <InArgument x:TypeArguments="s:String[]" x:Key="sub_codes">[subCODES]</InArgument>
+                <InArgument x:TypeArguments="x:Double" x:Key="tot_cred">[tcred]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="str">[st]</InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="in_sec_ct">[no_of_sec]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_word_path">[word_path]</InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
             <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_47">
@@ -912,9 +913,6 @@
             </Assign>
           </Sequence>
         </ui:InterruptibleDoWhile.Body>
-        <ui:InterruptibleDoWhile.Condition>
-          <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="no_of_sec&gt;0" />
-        </ui:InterruptibleDoWhile.Condition>
       </ui:InterruptibleDoWhile>
       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="704,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;--------------THE END---------------&quot;]" />
     </Sequence>
